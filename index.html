@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignis Electricals | Powering Homes with Trust and Safety</title>
+  <style>
+    /* === GENERAL STYLES === */
+    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; font-family:"Poppins",sans-serif; }
+    body { background-color:#0f0f0f; color:#f5f5f5; }
+    header { background:#121212; position:fixed; width:100%; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; padding:1rem 3rem; border-bottom:1px solid #222; }
+    header h1 { font-size:1.5rem; color:#ffb300; letter-spacing:1px; }
+    nav a { color:#f5f5f5; text-decoration:none; margin-left:20px; font-weight:500; transition:color 0.3s; }
+    nav a:hover { color:#ffb300; }
+    section { padding:100px 10%; min-height:100vh; }
+    /* HOME */
+    #home { display:flex; flex-direction:column; justify-content:center; align-items:center; background:linear-gradient(to bottom right,#000,#1a1a1a); text-align:center; }
+    #home h2 { font-size:3rem; color:#ffb300; margin-bottom:15px; }
+    #home p { font-size:1.2rem; max-width:700px; margin-bottom:25px; }
+    .btn { background:#ffb300; color:#000; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold; transition:0.3s; }
+    .btn:hover { background:#ffcb44; }
+    /* ABOUT */
+    #about { background:#141414; }
+    #about h2 { color:#ffb300; margin-bottom:20px; text-align:center; }
+    #about p { line-height:1.8; max-width:800px; margin:auto; text-align:center; }
+    /* SERVICES */
+    #services { background:#0f0f0f; }
+    #services h2 { text-align:center; color:#ffb300; margin-bottom:40px; }
+    .service-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .service { background:#1a1a1a; padding:20px; border-radius:10px; border:1px solid #222; transition:0.3s; }
+    .service:hover { transform:translateY(-5px); border-color:#ffb300; }
+    .service h3 { color:#ffb300; margin-bottom:10px; }
+    /* PROJECTS / GALLERY */
+    #projects { background:#141414; }
+    #projects h2 { text-align:center; color:#ffb300; margin-bottom:40px; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px; }
+    .gallery img { width:100%; border-radius:10px; transition: transform 0.3s ease, box-shadow 0.3s; cursor:pointer; }
+    .gallery img:hover { transform:scale(1.05); box-shadow:0 0 15px #ffb300; }
+    .lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:100; }
+    .lightbox img { width:80%; max-width:700px; border-radius:10px; }
+    .lightbox.active { display:flex; }
+    /* RATING */
+    #rating { background:#141414; text-align:center; }
+    #rating h2 { color:#ffb300; margin-bottom:20px; }
+    .stars { display:flex; justify-content:center; gap:10px; font-size:2rem; cursor:pointer; margin-bottom:20px; }
+    .stars i { color:#444; transition:color 0.3s; }
+    .stars i.active { color:#ffb300; }
+    textarea { width:80%; max-width:500px; height:100px; padding:10px; border-radius:8px; border:none; outline:none; background:#1a1a1a; color:#f5f5f5; resize:none; margin-bottom:20px; }
+    button { background:#ffb300; border:none; padding:10px 20px; border-radius:5px; font-weight:bold; cursor:pointer; transition:0.3s; }
+    button:hover { background:#ffcb44; }
+    /* CONTACT */
+    #contact { background:#0f0f0f; }
+    #contact h2 { text-align:center; color:#ffb300; margin-bottom:30px; }
+    .contact-info { text-align:center; line-height:1.8; }
+    footer { background:#121212; text-align:center; padding:20px; border-top:1px solid #222; color:#aaa; }
+    footer span { color:#ffb300; }
+    /* MEDIA QUERIES FOR MOBILE */
+    @media (max-width:768px) {
+      header { flex-direction:column; align-items:flex-start; padding:1rem 2rem; }
+      nav { margin-top:10px; }
+      nav a { display:block; margin:8px 0; }
+      #home h2 { font-size:2.2rem; }
+      #home p { font-size:1rem; }
+      .btn { padding:8px 16px; }
+      textarea { width:95%; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Ignis Electricals</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#rating">Ratings</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home">
+  <h2>Ignis Electricals</h2>
+  <p>"Powering homes with trust and safety"</p>
+  <a href="#contact" class="btn">Contact Now</a>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    At Ignis Electricals, we are committed to delivering safe, reliable, and
+    efficient electrical services for homes, offices, and commercial spaces.
+    With a team of skilled professionals and years of hands-on experience, we
+    ensure every project meets the highest standards of quality and safety.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="service-list">
+    <div class="service"><h3>Electrical Wiring</h3><p>Residential and commercial wiring solutions.</p></div>
+    <div class="service"><h3>Switchboard and MCB Installations</h3><p>Safe and reliable setup.</p></div>
+    <div class="service"><h3>Fan, Light, and Appliance Fittings</h3><p>Installation of fixtures and fittings.</p></div>
+    <div class="service"><h3>Generator and Inverter Setup</h3><p>Backup power installation.</p></div>
+    <div class="service"><h3>CCTV and Electrical Setup</h3><p>Full electrical and surveillance system installation.</p></div>
+    <div class="service"><h3>Maintenance and Repairs</h3><p>Quick troubleshooting and repairs.</p></div>
+    <div class="service"><h3>Installation of Earthing</h3><p>Professional earthing for safety.</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Our Recent Works</h2>
+  <div class="gallery">
+    <img src="work1.jpg" alt="Project 1">
+    <img src="work2.jpg" alt="Project 2">
+    <img src="work3.jpg" alt="Project 3">
+    <img src="work4.jpg" alt="Project 4">
+    <img src="work5.jpg" alt="Project 5">
+    <img src="work6.jpg" alt="Project 6">
+    <img src="work7.jpg" alt="Project 7">
+    <img src="work8.jpg" alt="Project 8">
+    <img src="work9.jpg" alt="Project 9">
+    <img src="work10.jpg" alt="Project 10">
+    <img src="work11.jpg" alt="Project 11">
+    <img src="work12.jpg" alt="Project 12">
+    <img src="work13.jpg" alt="Project 13">
+    <img src="work14.jpg" alt="Project 14">
+    <img src="work15.jpg" alt="Project 15">
+    <img src="work16.jpg" alt="Project 16">
+    <img src="work17.jpg" alt="Project 17">
+    <img src="work18.jpg" alt="Project 18">
+    <img src="work19.jpg" alt="Project 19">
+    <img src="work20.jpg" alt="Project 20">
+    <img src="work21.jpg" alt="Project 21">
+    <img src="work22.jpg" alt="Project 22">
+    <img src="work23.jpg" alt="Project 23">
+    <img src="work24.jpg" alt="Project 24">
+    <img src="work25.jpg" alt="Project 25">
+    <img src="work26.jpg" alt="Project 26">
+    <img src="work27.jpg" alt="Project 27">
+    <img src="work28.jpg" alt="Project 28">
+    <img src="work29.jpg" alt="Project 29">
+    <img src="work30.jpg" alt="Project 30">
+    <img src="work31.jpg" alt="Project 31">
+    <img src="work32.jpg" alt="Project 32">
+    <img src="work33.jpg" alt="Project 33">
+    <img src="work34.jpg" alt="Project 34">
+    <img src="work35.jpg" alt="Project 35">
+    <img src="work36.jpg" alt="Project 36">
+    <img src="work37.jpg" alt="Project 37">
+    <img src="work38.jpg" alt="Project 38">
+    <img src="work39.jpg" alt="Project 39">
+    <img src="work40.jpg" alt="Project 40">
+    <img src="work41.jpg" alt="Project 41">
+    <img src="work42.jpg" alt="Project 42">
+    <img src="work43.jpg" alt="Project 43">
+    <img src="work44.jpg" alt="Project 44">
+    <img src="work45.jpg" alt="Project 45">
+    <img src="work46.jpg" alt="Project 46">
+    <img src="work47.jpg" alt="Project 47">
+    <img src="work48.jpg" alt="Project 48">
+    <img src="work49.jpg" alt="Project 49">
+    <img src="work50.jpg" alt="Project 50">
+    <img src="work51.jpg" alt="Project 51">
+    <img src="work52.jpg" alt="Project 52">
+    <img src="work53.jpg" alt="Project 53">
+    <img src="work54.jpg" alt="Project 54">
+    <img src="work55.jpg" alt="Project 55">
+    <img src="work56.jpg" alt="Project 56">
+    <img src="work57.jpg" alt="Project 57">
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="enlarged">
+  </div>
+</section>
+
+<section id="rating">
+  <h2>Rate Our Service</h2>
+  <div class="stars">
+    <i class="star" data-value="1">★</i>
+    <i class="star" data-value="2">★</i>
+    <i class="star" data-value="3">★</i>
+    <i class="star" data-value="4">★</i>
+    <i class="star" data-value="5">★</i>
+  </div>
+  <textarea placeholder="Leave your feedback here..."></textarea><br>
+  <button>Submit</button>
+
+  <h3 style="color:#ffb300; margin-top:30px;">Customer Reviews</h3>
+  <div id="reviews" style="margin-top:20px;"></div>
+</section>
+
+<script>
+  // STAR RATING
+  const stars = document.querySelectorAll(".star");
+  let rating = 0;
+
+  stars.forEach((star,index)=>{
+    star.addEventListener("click",()=>{
+      rating = index+1;
+      stars.forEach((s,i)=> s.classList.toggle("active",i<=index));
+    });
+  });
+
+  const submitBtn = document.querySelector("#rating button");
+  submitBtn.addEventListener("click",()=>{
+    const feedback = document.querySelector("#rating textarea").value.trim();
+    if(rating===0){ alert("Please select a rating before submitting!"); return; }
+    if(feedback===""){ alert("Please write some feedback before submitting!"); return; }
+
+    // Create a new review card
+    const reviewDiv = document.createElement("div");
+    reviewDiv.style.background = "#1a1a1a";
+    reviewDiv.style.padding = "10px 15px";
+    reviewDiv.style.borderRadius = "8px";
+    reviewDiv.style.marginBottom = "10px";
+    reviewDiv.style.border = "1px solid #222";
+
+    // Add stars
+    let starsHtml = "";
+    for(let i=1;i<=5;i++){
+      starsHtml += i<=rating ? "★" : "☆";
+    }
+
+    reviewDiv.innerHTML = `<p style="color:#ffb300; font-size:1.2rem; margin-bottom:5px;">${starsHtml}</p>
+                           <p>${feedback}</p>`;
+
+    // Append to reviews
+    document.getElementById("reviews").prepend(reviewDiv);
+
+    // Reset form
+    stars.forEach(s=>s.classList.remove("active"));
+    rating=0;
+    document.querySelector("#rating textarea").value="";
+  });
+
+  // LIGHTBOX
+  const galleryImages = document.querySelectorAll(".gallery img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector("img");
+
+  galleryImages.forEach(img=>{
+    img.addEventListener("click",()=>{
+      lightbox.classList.add("active");
+      lightboxImg.src=img.src;
+    });
+  });
+
+  lightbox.addEventListener("click",()=>{
+    lightbox.classList.remove("active");
+  });
+</script>
